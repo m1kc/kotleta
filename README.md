@@ -36,6 +36,7 @@ export CROSS_COMPILE=arm-linux-gnueabi-
 
 make defconfig
 make menuconfig # or 'make gconfig'
+                # turn off RPC or compiling will fail
 make
 make install
 ```
