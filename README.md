@@ -44,7 +44,19 @@ Files will be placed in the `_install` folder.
 
 ## Step 5. Build the disk image
 
-**TODO**
+```bash
+qemu-img create -f raw kotleta.img 1G
+losetup -f kotleta.img # from root
+fdisk /dev/loop0 # from root
+# now create one partition filling the whole disk, write it and exit fdisk
+kpartx -va /dev/loop0 # from root
+mount /dev/mapper/loop0p1 /mnt # from root
+cp -r path/to/busybox/_install/*
+sync
+umount /mnt # from root
+kpartx -vd /dev/loop0 # from root
+losetup -d /dev/loop0 # from root
+```
 
 ## Step 6. Run
 
