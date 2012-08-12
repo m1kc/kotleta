@@ -4,8 +4,8 @@ A research project started by two drunk monkeys.
 
 ## Step 1. Get source code
 
-* Linux 3.5.1
-* Busybox 1.20.2
+* Linux 3.5.1: http://www.kernel.org/pub/linux/kernel/v3.0/linux-3.5.1.tar.bz2
+* Busybox 1.20.2: http://www.busybox.net/downloads/busybox-1.20.2.tar.bz2
 
 ## Step 2. Build toolchain
 
@@ -46,7 +46,7 @@ Files will be placed in the `_install` folder.
 
 ```bash
 qemu-img create -f raw kotleta.img 1G
-# now action from root
+su # following commands require root rights
 losetup -f kotleta.img
 fdisk /dev/loop0
 # now create one partition filling the whole disk, write it and exit fdisk
