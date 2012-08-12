@@ -51,7 +51,7 @@ fdisk /dev/loop0 # from root
 # now create one partition filling the whole disk, write it and exit fdisk
 kpartx -va /dev/loop0 # from root
 mount /dev/mapper/loop0p1 /mnt # from root
-cp -r path/to/busybox/_install/*
+cp -r path/to/busybox/_install/* /mnt
 sync
 umount /mnt # from root
 kpartx -vd /dev/loop0 # from root
