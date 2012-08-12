@@ -45,6 +45,8 @@ Files will be placed in the `_install` folder.
 
 ## Step 5. Build the disk image
 
+Note: in Arch Linux, kpartx is included in package `multipath-tools-git`.
+
 ```bash
 qemu-img create -f raw kotleta.img 1G
 su # following commands require root rights
