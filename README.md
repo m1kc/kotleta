@@ -1,4 +1,3 @@
-kotleta
-=======
+# Kotleta
 
-Don't ask me why.
+A research project started by two drunk monkeys.
