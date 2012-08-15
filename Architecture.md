@@ -17,7 +17,12 @@
 
 ### Как оно запустилось?
 
-Единый classpath для всех приложений: классы J2ME, bootstrap, xBUS, TCUILite.
+Единый classpath для всех приложений:
+
+* Классы J2ME
+* bootstrap
+* xBUS
+* TCUILite
 
 _При этом Main класс берётся из архива Toolkit. Сделано это для того, чтобы сразу после запуска приложение установило соединение xBUS, а в дальнейшем таким образом в корневой класс MIDlet или Kotlet можно передавать события вроде powerOff, powerOn, onMinimize, destroyApp и прочие._
 
